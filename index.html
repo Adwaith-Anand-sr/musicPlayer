@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Autour+One&family=Bebas+Neue&family=Black+Ops+One&family=Poppins:wght@900&family=Skranji:wght@700&display=swap');
+  </style>
+  <script src="https://kit.fontawesome.com/08e8ff481f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" preloaded href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+  <main>
+    <div class="player">
+      <nav>
+        <span class="material-symbols-outlined">list</span>
+        <span class="material-symbols-outlined">playlist_add</span>
+        <span class="material-symbols-outlined">settings</span>
+      </nav>
+      <div class="songDetails">
+        <h3 class="songName"></h3>
+        <div class="songIMG"></div>
+        <div class="progressDetails">
+          <span class="start">00:00</span>
+          <input type="range" value="0" class="progress">
+          <span class="end">00:00</span>
+        </div>
+        <div class="controls">
+          <div class="back-btn">
+            <i class="fa-solid fa-backward"></i>
+          </div>
+          <div class="pausePlay-btn">
+            <i id="playPause-icon" class="fa-solid fa-play play"></i>
+          </div>
+          <div class="next-btn">
+            <i class="fa-solid fa-forward"></i>
+          </div>
+        </div>
+      </div>
+      <audio class="song" src="">
+      </audio>
+    </div>
+  </main>
+
+  
+  <script src="filePath.js" type="text/javascript" charset="utf-8"></script>
+  <script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

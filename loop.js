@@ -3,6 +3,7 @@ const repo = 'musicPlayer';
 const path = 'Music';
 
 async function loopThroughFolder() {
+   
   try {
     const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`);
     const data = await response.json();

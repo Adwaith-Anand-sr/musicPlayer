@@ -1,4 +1,3 @@
-
 setTimeout(function() {
-   console.log(pathArray);
-}, 1000);
+   console.log(sourceArray);
+}, 500);

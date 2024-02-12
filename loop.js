@@ -1,6 +1,6 @@
 const owner = 'adwaith-anand-sr';
 const repo = 'musicPlayer';
-const path = 'path/to/folder';
+const path = 'Music';
 
 async function loopThroughFolder() {
   try {

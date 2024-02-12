@@ -11,6 +11,8 @@ async function loopThroughFolder() {
     const data = await response.json();
     for (const item of data) {
       sourceArray.push("Music/"+item.name);
+      
+      
     }
   } catch (error) {
     console.error('Error fetching folder contents:', error);

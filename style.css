@@ -45,6 +45,8 @@ body,html{
    height: 15px;
    border: 1px solid red;
    background-image: url("/Images/images (4).jpeg");
+   object-fit: cover;
+   background-position: center;
 }
 .list .elem{
    width: 100%;

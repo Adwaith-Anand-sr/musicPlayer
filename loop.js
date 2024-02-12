@@ -13,7 +13,7 @@ async function loopThroughFolder() {
        if (!sourceArray[index]) {
         sourceArray[index] = [];
       }
-      sourceArray[index].push(item.name);
+      sourceArray[index].push("Music/"+item.name);
       index++;
     }
   } catch (error) {

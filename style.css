@@ -39,7 +39,6 @@ body,html{
    position: absolute;
    top: 40%;
    background: #625d5d;
-   
 }
 .list .elem{
    display: flex;
@@ -56,6 +55,10 @@ body,html{
    background-image: url("/Images/images (4).jpeg");
    object-fit: cover;
    background-position: top;
-   margin: 0 5%;
-   
+   margin: 0 5% 0 3%;
+}
+.list .elem h3{
+   color: whitesmoke;
+   font-size: 4.3vw;
+   font-weight: bold;
 }

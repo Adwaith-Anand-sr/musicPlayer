@@ -21,7 +21,7 @@ body,html{
    background: #3d3c3c;
    object-fit:cover ;
    background-position: center;
-   box-shadow: inset 0 -10px 10px 5px rgba(0, 0, 0, 0.5);
+   box-shadow: inset 0 -15px 10px 8px rgba(0, 0, 0, 0.5);
 }
 .songName{
    position: relative;
@@ -29,6 +29,6 @@ body,html{
    left: 5%;
    color: white;
    text-transform: capitalize;
-   font-size: 7vw;
+   font-size: 6.5vw;
    font-weight:bold;
 }

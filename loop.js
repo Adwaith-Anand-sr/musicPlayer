@@ -10,14 +10,17 @@ async function loopThroughFolder() {
     const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`);
     const data = await response.json();
     for (const item of data) {
-       if (!sourceArray[index]) {
-        sourceArray[index] = [];
-      }
-      sourceArray[index].push("Music/"+item.name);
-      index++;
+      sourceArray.push("Music/"+item.name);
     }
   } catch (error) {
     console.error('Error fetching folder contents:', error);
   }
 }
 loopThroughFolder();
+
+
+setTimeout(function() {
+   song.src = sourceArray[0]
+   console.log(sourceArray[0]);
+   console.log(song);
+}, 100);

@@ -9,7 +9,7 @@ body,html{
    background: #1f1c1c;
 }
 .imageDisplay{
-   width: 100%;
-   height: 40%;
+   width: 100vw;
+   height: 40vh;
    background: #3d3c3c;
 }

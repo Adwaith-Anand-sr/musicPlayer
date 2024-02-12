@@ -41,8 +41,8 @@ body,html{
    background: #625d5d;
 }
 .list .img{
-   width: 15px;
-   height: 15px;
+   width: 30px;
+   height: 30px;
    border: 1px solid red;
    background-image: url("/Images/images (4).jpeg");
    object-fit: cover;

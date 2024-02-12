@@ -41,6 +41,7 @@ body,html{
    background: #625d5d;
 }
 .list .img{
+   display: inline;
    width: 30px;
    height: 30px;
    border: 1px solid red;

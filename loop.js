@@ -2,7 +2,6 @@ const owner = 'adwaith-anand-sr';
 const repo = 'musicPlayer';
 const path = 'Music';
 
-let index = 0
 // looping through Music folder and getting names of each files
 async function loopThroughFolder() {
    
@@ -11,8 +10,6 @@ async function loopThroughFolder() {
     const data = await response.json();
     for (const item of data) {
       sourceArray.push("Music/"+item.name);
-      
-      
     }
   } catch (error) {
     console.error('Error fetching folder contents:', error);

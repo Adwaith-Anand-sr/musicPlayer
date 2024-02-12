@@ -33,3 +33,21 @@ body,html{
    font-size: 6.5vw;
    font-weight:bold;
 }
+.list{
+   width: 100%;
+   height: 60%;
+   position: absolute;
+   top: 40%;
+   background: #625d5d;
+}
+.list .img{
+   width: 15px;
+   height: 15px;
+   border: 1px solid red;
+   background-image: url("/Images/images (4).jpeg");
+}
+.list .elem{
+   width: 100%;
+   height: 13%;
+   border: 1px solid white;
+}

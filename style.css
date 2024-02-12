@@ -10,11 +10,6 @@ body,html{
    background: #1f1c1c;
    overflow: hidden;
 }
-.main{
-   width: 100%;
-   height: 100%;
-   overflow: hidden;
-}
 .imageDisplay{
    position: absolute;
    width: 100%;
@@ -24,41 +19,39 @@ body,html{
    background-position: center;
    box-shadow: inset 0 -15px 10px 8px rgba(0, 0, 0, 0.5);
 }
-.songName{
-   position: relative;
-   top: 85%;
-   left: 5%;
+.imageDisplay h2{
+   margin:65% 0 0 8%;
    color: white;
-   text-transform: capitalize;
-   font-size: 6.5vw;
-   font-weight:bold;
+   font-size: 5.5vw;
+   font-weight: bold;
 }
 .list{
    width: 100%;
    height: 60%;
    position: absolute;
    top: 40%;
-   background: #625d5d;
+   background: rgba(17,16,16,0.947);
 }
 .list .elem{
    display: flex;
-   align-items:center;
+   align-items: center;
    width: 100%;
-   height: 13%;
-   border: 1px solid white;
+   height: 12%;
+   border-bottom: 1px solid #ffffff07;
+   border-radius: 8px;
+   margin-bottom: 0.8%;
 }
 .list .img{
-   width: 40px;
-   height: 40px;
+   width: 45px;
+   height: 45px;
    border-radius: 50%;
-   border: 1px solid red;
+   border: 1px solid whitesmoke;
    background-image: url("/Images/images (4).jpeg");
    object-fit: cover;
    background-position: top;
-   margin: 0 5% 0 3%;
+   margin: 0 5% 0% 3%;
 }
 .list .elem h3{
    color: whitesmoke;
-   font-size: 4.3vw;
-   font-weight: bold;
+   font-size: 3.6vw;
 }

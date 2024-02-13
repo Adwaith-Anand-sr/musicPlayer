@@ -13,14 +13,7 @@
       <audio src=""></audio>
    </div>
    <div class="list">
-      <div class="elem">
-         <div class="img"></div>
-         <h3>SongName Goes Here...</h3>
-      </div>
-      <div class="elem">
-         <div class="img"></div>
-         <h3>SongName Goes Here...</h3>
-      </div>
+
    </div>
    
    
@@ -28,9 +21,19 @@
       let sourceArray = []
       let song = document.querySelector("audio")
       
-
+      let list= document.querySelector(".list")
+      sourceArray.forEach(item =>{
+         console.log(item);
+         list.innerHTML += `
+            <div class="list">
+               <div class ="elem">
+                  <div class="img"></div>
+                  <h3>${item}</h3>
+               </div>
+            </div>
+         `
+      })
    </script>
-   <script src="loop.js" type="text/javascript" charset="utf-8"></script>
    <script src="script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

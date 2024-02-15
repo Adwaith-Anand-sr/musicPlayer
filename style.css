@@ -20,7 +20,7 @@ body,html{
    box-shadow: inset 0 -15px 10px 8px rgba(0, 0, 0, 0.5);
 }
 .imageDisplay h2{
-   text-wrap: nowrap;
+   white-space: nowrap;
    overflow-x: hidden;
    margin:65% 0 0 8%;
    color: white;

@@ -11,6 +11,7 @@ body,html{
    overflow: hidden;
 }
 .imageDisplay{
+   overflow: hidden;
    position: absolute;
    width: 100%;
    height: 40%;
@@ -20,12 +21,34 @@ body,html{
    box-shadow: inset 0 -15px 10px 8px rgba(0, 0, 0, 0.5);
 }
 .imageDisplay h2{
+   display: inline;
+   min-height: 30px;
+   height: 30px;
+   position: relative;
+   top: 70%;
+   left: 5%;
    white-space: nowrap;
-   overflow-x: hidden;
-   margin:65% 0 0 8%;
+   overflow-x: auto;
    color: white;
    font-size: 4.3vw;
    font-weight: bold;
+   width: 80%;
+}
+.imageDisplay .playPause{
+   background: #890abe;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   position: relative;
+   top: 75%;
+   left: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.imageDisplay .playPause img{
+   width: 40px;
+   height: 40px;
 }
 .list{
    width: 100%;

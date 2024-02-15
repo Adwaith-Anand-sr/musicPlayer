@@ -62,7 +62,7 @@ function typeWriter() {
    if (textIndex < currentPlaying.length) {
      container.textContent += currentPlaying.charAt(textIndex);
      textIndex++;
-     setTimeout(typeWriter, 50); // Adjust typing speed here (milliseconds)
+     setTimeout(typeWriter, 25); // Adjust typing speed here (milliseconds)
    }
 }
 

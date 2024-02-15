@@ -56,6 +56,7 @@ body,html{
 }
 .list .elem h3{
    width: 75%;
+   text-wrap: nowrap;
    overflow-x: hidden;
    color: whitesmoke;
    font-size: 3.6vw;

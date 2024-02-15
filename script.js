@@ -49,4 +49,5 @@ list.addEventListener("click", (e)=>{
    song.src = sourceArray[e.target.id]
    console.log(song.src);
    song.play()
+   alert(song.src)
 })

@@ -32,14 +32,21 @@ loop()
 function listingSongs() {
    setTimeout(function() {
       console.log(sourceArray);
-      sourceArray.forEach((item)=>{
+      sourceArray.forEach((item,i)=>{
          list.innerHTML += `
-            <div class ="elem">
+            <div class ="elem" id="${i}">
                <div class="img"></div>
-               <h3>${item.replace("Music/","")}</h3>
+               <h3 id="${i}">${item.replace("Music/","").replace(/_/g, " ")}</h3>
             </div>
          `
       })
    }, 1000);
 }
 listingSongs()
+
+list.addEventListener("click", (e)=>{
+   console.log(e.target.id);
+   song.src = sourceArray[e.target.id]
+   console.log(song.src);
+   song.play()
+})

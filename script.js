@@ -6,6 +6,11 @@ let list = document.querySelector(".list")
 let currentPlaying
 let textIndex=0
 
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('.list'),
+    smooth: true
+});
+
 function loop() {
    // looping through Music folder and getting names of each files
 

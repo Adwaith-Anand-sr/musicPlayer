@@ -2,6 +2,7 @@ let backgroundImages = document.querySelector(".imageDisplay")
 backgroundImages.style.backgroundImage = `url('Images/images (1).jpeg')`
 let sourceArray = []
 let song = document.querySelector("audio")
+let list = document.querySelector(".list")
 
 
 function loop() {
@@ -28,4 +29,17 @@ function loop() {
 }
 loop()
 
-console.log(sourceArray[1]);
+function listingSongs() {
+   setTimeout(function() {
+      console.log(sourceArray);
+      sourceArray.forEach((item)=>{
+         list.innerHTML += `
+            <div class ="elem">
+               <div class="img"></div>
+               <h3>${item.replace("Music/","")}</h3>
+            </div>
+         `
+      })
+   }, 1000);
+}
+listingSongs()

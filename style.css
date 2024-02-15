@@ -20,6 +20,8 @@ body,html{
    box-shadow: inset 0 -15px 10px 8px rgba(0, 0, 0, 0.5);
 }
 .imageDisplay h2{
+   text-wrap: nowrap;
+   overflow: hidden;
    margin:65% 0 0 8%;
    color: white;
    font-size: 5.5vw;
@@ -42,6 +44,17 @@ body,html{
    border-radius: 8px;
    margin-bottom: 0.8%;
    overflow: hidden;
+}
+.list .elem:hover{
+   animation: recoverbg 0.2s linear;
+}
+@keyframes recoverbg{
+   0%{
+      background: #222222;
+   }
+   100%{
+      background: rgba(17,16,16,0.947);
+   }
 }
 .list .img{
    min-width: 45px;

@@ -21,10 +21,10 @@ body,html{
 }
 .imageDisplay h2{
    text-wrap: nowrap;
-   overflow: hidden;
+   overflow-x: hidden;
    margin:65% 0 0 8%;
    color: white;
-   font-size: 5vw;
+   font-size: 4.3vw;
    font-weight: bold;
 }
 .list{

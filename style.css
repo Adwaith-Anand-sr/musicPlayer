@@ -24,6 +24,7 @@ body,html{
    display: inline;
    min-height: 30px;
    height: 30px;
+   width: 85%;
    position: relative;
    top: 70%;
    left: 5%;
@@ -33,7 +34,21 @@ body,html{
    font-size: 4.3vw;
    font-weight: bold;
    width: 80%;
+   background: #bd32f7;
+   --webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+   animation: anim 15s linear infinite;
+   
 }
+ @keyframes anim{
+   0%{
+     filter: hue-rotate(0deg);
+   }
+   100%{
+     filter: hue-rotate(360deg);
+   }
+ }
 .imageDisplay .playPause{
    background: #890abe;
    width: 50px;

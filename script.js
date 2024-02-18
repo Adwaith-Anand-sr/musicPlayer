@@ -1,5 +1,3 @@
-let backgroundImages = document.querySelector(".imageDisplay")
-backgroundImages.style.backgroundImage = `url('Images/images (1).jpeg')`
 let sourceArray = []
 let song = document.querySelector("audio")
 let list = document.querySelector(".list")
@@ -10,6 +8,20 @@ const scroll = new LocomotiveScroll({
     el: document.querySelector('.list'),
     smooth: true
 });
+
+function randomBgImg() {
+   let array=[
+      "Images/images (1).jpeg",
+      "Images/images (2).jpeg",
+      "Images/images (3).jpeg"
+   ]
+   let random = Math.floor(Math.random()*3)
+   let backgroundImages = document.querySelector(".imageDisplay")
+   //backgroundImages.style.backgroundImage = `url('Images/images (1).jpeg')`
+   backgroundImages.style.backgroundImage = `url('${array[random]}')`
+
+}
+randomBgImg()
 
 function loop() {
    // looping through Music folder and getting names of each files

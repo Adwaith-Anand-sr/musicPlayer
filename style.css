@@ -49,8 +49,8 @@ body,html{
  }
 .imageDisplay .playPause{
    background: #890abe;
-   width: 50px;
-   height: 50px;
+   width: 45px;
+   height: 45px;
    border-radius: 50%;
    position: relative;
    top: 65%;

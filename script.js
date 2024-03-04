@@ -1,8 +1,11 @@
 let sourceArray = []
 let song = document.querySelector("audio")
 let list = document.querySelector(".list")
+let playBtn = document.querySelector(".playBtn")
+let pauseBtn = document.querySelector(".pauseBtn")
 let currentPlaying
 let textIndex=0
+
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('.list'),
@@ -65,6 +68,8 @@ listingSongs()
 list.addEventListener("click", (e)=>{
    song.src = sourceArray[e.target.id]
    song.play()
+   playBtn.style.display= "none"
+   pauseBtn.style.display= "block"
    document.querySelector(".imageDisplay .songName").textContent=""
    textIndex=0
    currentPlaying= sourceArray[e.target.id].replace("Music/","").replace(/_/g," ")
@@ -83,3 +88,7 @@ function typeWriter() {
    }
 }
 
+function playPlauseEvent() {
+   
+}
+playPlauseEvent()

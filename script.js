@@ -62,7 +62,7 @@ function listingSongs() {
 }
 listingSongs()
 
-/*
+
 function playingAnimSetting(id) {
    let playAnimContainer = document.querySelector(".playAnim-container")
    let musicPlayLines = document.querySelectorAll(".playAnim-container span")
@@ -73,7 +73,8 @@ function playingAnimSetting(id) {
    let currentElem = document.querySelector("." + id)
    console.log(currentElem);
 }
-*/
+
+
 list.addEventListener("click", (e)=>{
    song.src = sourceArray[e.target.id]
    song.play()

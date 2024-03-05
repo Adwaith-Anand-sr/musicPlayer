@@ -13,7 +13,7 @@ const scroll = new LocomotiveScroll({
     el: document.querySelector('.list'),
     smooth: true
 });
-
+alert("")
 function randomBgImg() {
    let array=[
       "Images/images (1).jpeg",

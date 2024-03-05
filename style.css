@@ -103,6 +103,7 @@ body,html{
    border-radius: 8px;
    margin-bottom: 0.8%;
    overflow: hidden;
+   white-space: nowrap;
 }
 .list .elem:hover{
    animation: recoverbg 0.2s linear;

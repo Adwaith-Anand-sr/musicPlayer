@@ -7,13 +7,11 @@ let playPause = document.querySelector(".playPause")
 let numberOfSongs 
 let currentPlaying
 let textIndex=0
-let gg = document.querySelector(".3")
-console.log(gg);
 const scroll = new LocomotiveScroll({
     el: document.querySelector('.list'),
     smooth: true
 });
-alert("")
+
 function randomBgImg() {
    let array=[
       "Images/images (1).jpeg",

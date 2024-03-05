@@ -131,7 +131,7 @@ body,html{
    margin: 0 5% 0% 3%;
 }
 .list .elem h3{
-   width: 70%;
+   width: 73%;
    text-wrap: nowrap;
    overflow-x: hidden;
    color: whitesmoke;
@@ -146,13 +146,14 @@ audio{
 
 /* animatiom while playing musics */
 .playAnim-container{
+   position: absolute;
+   left: calc(100% - 30px);
    display: flex;
    justify-content: space-around;
    align-items: end;
    width: 20px;
    height: 25px;
-   border: 1px solid black;
-   background: lightyellow;
+   
 }
 .playAnim-container span{
    height: 80%;

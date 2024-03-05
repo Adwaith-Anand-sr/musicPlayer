@@ -4,7 +4,7 @@ let list = document.querySelector(".list")
 let playBtn = document.querySelector(".playBtn")
 let pauseBtn = document.querySelector(".pauseBtn")
 let playPause = document.querySelector(".playPause")
-
+let numberOfSongs 
 let currentPlaying
 let textIndex=0
 
@@ -54,7 +54,7 @@ loop()
 
 function listingSongs() {
    setTimeout(function() {
-      console.log(sourceArray);
+      numberOfSongs= sourceArray.length
       sourceArray.forEach((item,i)=>{
          list.innerHTML += `
             <div class ="elem ${i}" id="${i}">
@@ -76,9 +76,7 @@ list.addEventListener("click", (e)=>{
    textIndex=0
    currentPlaying= sourceArray[e.target.id].replace("Music/","").replace(/_/g," ")
    typeWriter()
-   song.addEventListener("canplay", ()=>{
-      console.log("song is playing");
-   })
+   
 })
 
 function typeWriter() {
@@ -92,7 +90,17 @@ function typeWriter() {
 
 function playPlauseEvent() {
    playPause.addEventListener("click", ()=>{
-      if (song.paused) {
+      if (song.src.includes("/null")) {
+         let r = Math.floor(Math.random()* (numberOfSongs-1))
+         song.src = sourceArray[r]
+         song.play()
+         playBtn.style.display= "none"
+         pauseBtn.style.display= "block"
+         document.querySelector(".imageDisplay .songName").textContent=""
+         currentPlaying= sourceArray[r].replace("Music/","").replace(/_/g," ")
+         typeWriter()
+      }
+      else if (song.paused) {
          console.log('Audio is not playing.');
          playBtn.style.display= "none"
          pauseBtn.style.display= "block"

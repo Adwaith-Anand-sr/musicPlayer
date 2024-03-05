@@ -92,14 +92,14 @@ function typeWriter() {
 
 function playPlauseEvent() {
    playPause.addEventListener("click", ()=>{
-      if (audio.paused) {
+      if (song.paused) {
          console.log('Audio is not playing.');
-         playBtn.style.display= "block"
-         pauseBtn.style.display= "none"
-         song.play()
-      } else {
          playBtn.style.display= "none"
          pauseBtn.style.display= "block"
+         song.play()
+      } else {
+         playBtn.style.display= "block"
+         pauseBtn.style.display= "none"
          song.pause()
       }
    });

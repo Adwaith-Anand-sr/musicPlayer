@@ -7,7 +7,8 @@ let playPause = document.querySelector(".playPause")
 let numberOfSongs 
 let currentPlaying
 let textIndex=0
-
+let gg = document.querySelector(".3")
+console.log(gg);
 const scroll = new LocomotiveScroll({
     el: document.querySelector('.list'),
     smooth: true
@@ -63,6 +64,17 @@ function listingSongs() {
 }
 listingSongs()
 
+function playingAnimSetting(id) {
+   let playAnimContainer = document.querySelector(".playAnim-container")
+   let musicPlayLines = document.querySelectorAll(".playAnim-container span")
+   musicPlayLines.forEach((item,i)=>{
+      item.style.left = ( i * 25) + "%"
+      item.style.marginLeft = "1%"
+   })
+   let currentElem = document.querySelector("." + id)
+   console.log(currentElem);
+}
+
 list.addEventListener("click", (e)=>{
    song.src = sourceArray[e.target.id]
    song.play()
@@ -72,7 +84,7 @@ list.addEventListener("click", (e)=>{
    textIndex=0
    currentPlaying= sourceArray[e.target.id].replace("Music/","").replace(/_/g," ")
    typeWriter()
-   
+   playingAnimSetting(e.target.id)
 })
 
 function typeWriter() {

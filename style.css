@@ -104,6 +104,8 @@ body,html{
    margin-bottom: 1%;
    overflow: hidden;
    white-space: nowrap;
+   -ms-white-space: nowrap; /* For Internet Explorer */
+   -webkit-white-space: nowrap;
 }
 .list .elem:hover{
    animation: recoverbg 0.2s linear;

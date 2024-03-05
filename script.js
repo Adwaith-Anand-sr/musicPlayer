@@ -62,15 +62,26 @@ function listingSongs() {
 }
 listingSongs()
 
-
+let oldElemIndex, songsPlayed =0
 function playingAnimSetting(id) {
+   let elems = document.querySelectorAll(".elem")
+   songsPlayed++
+   oldElemIndex = id
+   if (songsPlayed >=2) {
+      elem.forEach((item,i)=>{
+         if(oldElemIndex == i){
+            item.removeChild(document.querySelector(".playAnim-container"))
+         }
+      })
+   }
+   
    let playAnimContainer = document.querySelector(".playAnim-container")
    let musicPlayLines = document.querySelectorAll(".playAnim-container span")
    musicPlayLines.forEach((item,i)=>{
       item.style.left = ( i * 25) + "%"
       item.style.marginLeft = "1%"
    })
-   let elems = document.querySelectorAll(".elem")
+   
    elems.forEach((elem,i)=>{
       if(id== i){
          elem.innerHTML +=`
@@ -83,11 +94,11 @@ function playingAnimSetting(id) {
          `
       }
    })
+   
 }
 
 
 list.addEventListener("click", (e)=>{
-   console.log(e);
    song.src = sourceArray[e.target.id]
    song.play()
    playBtn.style.display= "none"

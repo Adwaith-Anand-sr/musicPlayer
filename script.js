@@ -64,6 +64,7 @@ function listingSongs() {
 }
 listingSongs()
 
+/*
 function playingAnimSetting(id) {
    let playAnimContainer = document.querySelector(".playAnim-container")
    let musicPlayLines = document.querySelectorAll(".playAnim-container span")
@@ -74,7 +75,7 @@ function playingAnimSetting(id) {
    let currentElem = document.querySelector("." + id)
    console.log(currentElem);
 }
-
+*/
 list.addEventListener("click", (e)=>{
    song.src = sourceArray[e.target.id]
    song.play()
@@ -84,7 +85,7 @@ list.addEventListener("click", (e)=>{
    textIndex=0
    currentPlaying= sourceArray[e.target.id].replace("Music/","").replace(/_/g," ")
    typeWriter()
-   playingAnimSetting(e.target.id)
+   //playingAnimSetting(e.target.id)
 })
 
 function typeWriter() {

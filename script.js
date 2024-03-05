@@ -8,7 +8,6 @@ let numberOfSongs
 let currentPlaying
 let textIndex=0
 
-
 const scroll = new LocomotiveScroll({
     el: document.querySelector('.list'),
     smooth: true
@@ -23,7 +22,6 @@ function randomBgImg() {
    let random = Math.floor(Math.random()*3)
    let backgroundImages = document.querySelector(".imageDisplay")
    backgroundImages.style.backgroundImage = `url('${array[random]}')`
-
 }
 randomBgImg()
 
@@ -91,8 +89,6 @@ function playPlauseEvent() {
       if (song.src.includes("/null")) {
          let r = Math.floor(Math.random()* (numberOfSongs-1))
          song.src = sourceArray[r]
-         alert("")
-         alert(song.src)
          song.play()
          playBtn.style.display= "none"
          pauseBtn.style.display= "block"

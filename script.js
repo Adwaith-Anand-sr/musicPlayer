@@ -3,6 +3,8 @@ let song = document.querySelector("audio")
 let list = document.querySelector(".list")
 let playBtn = document.querySelector(".playBtn")
 let pauseBtn = document.querySelector(".pauseBtn")
+let playPause = document.querySelector(".playPause")
+
 let currentPlaying
 let textIndex=0
 
@@ -89,6 +91,17 @@ function typeWriter() {
 }
 
 function playPlauseEvent() {
-   
+   playPause.addEventListener("click", ()=>{
+      if (audio.paused) {
+         console.log('Audio is not playing.');
+         playBtn.style.display= "block"
+         pauseBtn.style.display= "none"
+         song.play()
+      } else {
+         playBtn.style.display= "none"
+         pauseBtn.style.display= "block"
+         song.pause()
+      }
+   });
 }
 playPlauseEvent()

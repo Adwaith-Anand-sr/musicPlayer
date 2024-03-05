@@ -70,12 +70,24 @@ function playingAnimSetting(id) {
       item.style.left = ( i * 25) + "%"
       item.style.marginLeft = "1%"
    })
-   let currentElem = document.querySelector("." + id)
-   console.log(currentElem);
+   let elems = document.querySelectorAll(".elem")
+   elems.forEach((elem,i)=>{
+      if(id== i){
+         elem.innerHTML +=`
+            <div class="playAnim-container">
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         `
+      }
+   })
 }
 
 
 list.addEventListener("click", (e)=>{
+   console.log(e);
    song.src = sourceArray[e.target.id]
    song.play()
    playBtn.style.display= "none"
@@ -84,7 +96,7 @@ list.addEventListener("click", (e)=>{
    textIndex=0
    currentPlaying= sourceArray[e.target.id].replace("Music/","").replace(/_/g," ")
    typeWriter()
-   //playingAnimSetting(e.target.id)
+   playingAnimSetting(e.target.id)
 })
 
 function typeWriter() {

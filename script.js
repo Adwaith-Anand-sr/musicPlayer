@@ -22,7 +22,6 @@ function randomBgImg() {
    ]
    let random = Math.floor(Math.random()*3)
    let backgroundImages = document.querySelector(".imageDisplay")
-   //backgroundImages.style.backgroundImage = `url('Images/images (1).jpeg')`
    backgroundImages.style.backgroundImage = `url('${array[random]}')`
 
 }
@@ -30,7 +29,6 @@ randomBgImg()
 
 function loop() {
    // looping through Music folder and getting names of each files
-
    const owner = 'adwaith-anand-sr';
    const repo = 'musicPlayer';
    const path = 'Music';
@@ -93,12 +91,15 @@ function playPlauseEvent() {
       if (song.src.includes("/null")) {
          let r = Math.floor(Math.random()* (numberOfSongs-1))
          song.src = sourceArray[r]
+         alert("")
+         alert(song.src)
          song.play()
          playBtn.style.display= "none"
          pauseBtn.style.display= "block"
          document.querySelector(".imageDisplay .songName").textContent=""
          currentPlaying= sourceArray[r].replace("Music/","").replace(/_/g," ")
          typeWriter()
+         
       }
       else if (song.paused) {
          console.log('Audio is not playing.');

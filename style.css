@@ -1,5 +1,4 @@
-@media only screen and (width: 360px) and (height: 628px) {
- 
+@media only screen and (max-width:600px) {
    .list .img{
       min-width: 30px;
       min-height: 30px;
@@ -12,7 +11,15 @@
       height: 20px;
    }
 }
-
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+   .list .img{
+      min-width: 30px;
+      min-height: 30px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid green;
+   }
+}
 
 
 *{

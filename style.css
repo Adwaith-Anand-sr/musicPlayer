@@ -219,4 +219,8 @@ audio{
       width: 30px;
       height: 30px;
    }
+   .playAnim-container{
+      width: 15px;
+      height: 20px;
+   }
 }

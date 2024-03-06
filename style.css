@@ -214,7 +214,8 @@ audio{
    }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (width: 360px) and (height: 628px) {
+ 
    .list .img{
       min-width: 30px;
       min-height: 30px;

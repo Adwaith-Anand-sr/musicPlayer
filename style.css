@@ -10,6 +10,9 @@
       width: 15px;
       height: 20px;
    }
+   .imageDisplay h2{
+      text-decoration: line-through;
+   }
 }
 @media only screen and (min-width: 600px) and (max-width: 900px) {
    .list .img{
@@ -18,6 +21,9 @@
       width: 30px;
       height: 30px;
       border: 1px solid green;
+   }
+   .imageDisplay h2{
+      text-decoration: underline;
    }
 }
 

@@ -16,7 +16,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("2")
+confirm("3")
 
 function randomBgImg() {
    let array=[
@@ -68,7 +68,7 @@ function listingSongs() {
 }
 listingSongs()
 
-let elemIndex, songsPlayed =0
+let oldElemIndex, songsPlayed =0, animStarted = false
 // function playingAnimSetting(id) {
 //    let elems = document.querySelectorAll(".elem")
 //    songsPlayed++
@@ -101,6 +101,11 @@ let elemIndex, songsPlayed =0
 
 function playingAnimSetting(id) {
    let elems = document.querySelectorAll(".elem")
+   let playAnimCont = document.querySelector(".playAnim-container")
+   animStarted = true
+   if (playAnimCont) {
+      elem.removeChild(playAnimCont)
+   }
    
     musicPlayLines.forEach((item,i)=>{
       item.style.left = ( i * 25) + "%"
@@ -109,6 +114,7 @@ function playingAnimSetting(id) {
    
    elems.forEach((elem,i)=>{
       if(id== i){
+         oldElemIndex= id
          elem.innerHTML +=`
             <div class="playAnim-container">
                <span></span>
@@ -119,7 +125,7 @@ function playingAnimSetting(id) {
          `
       }
    })
-   elemIndex= id
+   
 }
 
 list.addEventListener("click", (e)=>{

@@ -104,7 +104,10 @@ function playingAnimSetting(id) {
    let playAnimCont = document.querySelector(".playAnim-container")
    animStarted = true
    if (playAnimCont) {
-      elems.removeChild(playAnimCont)
+     elems.forEach((elem)=>{
+       elem.removeChild(playAnimCont)
+     })
+      
    }
    
     musicPlayLines.forEach((item,i)=>{
@@ -125,7 +128,6 @@ function playingAnimSetting(id) {
          `
       }
    })
-   
 }
 
 list.addEventListener("click", (e)=>{

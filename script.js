@@ -4,6 +4,8 @@ let list = document.querySelector(".list")
 let playBtn = document.querySelector(".playBtn")
 let pauseBtn = document.querySelector(".pauseBtn")
 let playPause = document.querySelector(".playPause")
+let playAnimContainer = document.querySelector(".playAnim-container")
+let musicPlayLines = document.querySelectorAll(".playAnim-container span")
 let swipeControls = document.querySelector(".swipe-controls")
 let swipeBound = swipeControls.getBoundingClientRect()
 let numberOfSongs 
@@ -66,22 +68,18 @@ function listingSongs() {
 }
 listingSongs()
 
-let oldElemIndex, songsPlayed =0
+let elemIndex, songsPlayed =0
 function playingAnimSetting(id) {
    let elems = document.querySelectorAll(".elem")
    songsPlayed++
-   oldElemIndex = id
    if (songsPlayed >=2) {
       elem.forEach((item,i)=>{
-         if(oldElemIndex == i){
+         if(elemIndex == i){
             item.removeChild(document.querySelector(".playAnim-container"))
          }
       })
    }
-   
-   let playAnimContainer = document.querySelector(".playAnim-container")
-   let musicPlayLines = document.querySelectorAll(".playAnim-container span")
-   musicPlayLines.forEach((item,i)=>{
+    musicPlayLines.forEach((item,i)=>{
       item.style.left = ( i * 25) + "%"
       item.style.marginLeft = "1%"
    })
@@ -98,7 +96,7 @@ function playingAnimSetting(id) {
          `
       }
    })
-   
+   elemIndex= id
 }
 
 list.addEventListener("click", (e)=>{

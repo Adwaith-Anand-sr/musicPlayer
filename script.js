@@ -16,7 +16,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("3")
+confirm("4")
 
 function randomBgImg() {
    let array=[
@@ -104,7 +104,7 @@ function playingAnimSetting(id) {
    let playAnimCont = document.querySelector(".playAnim-container")
    animStarted = true
    if (playAnimCont) {
-      elem.removeChild(playAnimCont)
+      elems.removeChild(playAnimCont)
    }
    
     musicPlayLines.forEach((item,i)=>{

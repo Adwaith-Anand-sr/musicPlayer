@@ -69,16 +69,39 @@ function listingSongs() {
 listingSongs()
 
 let elemIndex, songsPlayed =0
+// function playingAnimSetting(id) {
+//    let elems = document.querySelectorAll(".elem")
+//    songsPlayed++
+//    if (songsPlayed >=2) {
+//       elem.forEach((item,i)=>{
+//          if(elemIndex == i){
+//             item.removeChild(document.querySelector(".playAnim-container"))
+//          }
+//       })
+//    }
+//     musicPlayLines.forEach((item,i)=>{
+//       item.style.left = ( i * 25) + "%"
+//       item.style.marginLeft = "1%"
+//    })
+   
+//    elems.forEach((elem,i)=>{
+//       if(id== i){
+//          elem.innerHTML +=`
+//             <div class="playAnim-container">
+//                <span></span>
+//                <span></span>
+//                <span></span>
+//                <span></span>
+//             </div>
+//          `
+//       }
+//    })
+//    elemIndex= id
+// }
+
 function playingAnimSetting(id) {
    let elems = document.querySelectorAll(".elem")
-   songsPlayed++
-   if (songsPlayed >=2) {
-      elem.forEach((item,i)=>{
-         if(elemIndex == i){
-            item.removeChild(document.querySelector(".playAnim-container"))
-         }
-      })
-   }
+   
     musicPlayLines.forEach((item,i)=>{
       item.style.left = ( i * 25) + "%"
       item.style.marginLeft = "1%"

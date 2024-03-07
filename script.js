@@ -174,5 +174,7 @@ function changeSong(a) {
    if (a==1) {
       song.src = sourceArray[(currentSongId+1)]
       song.play()
+      currentPlaying= sourceArray[(currentSongId+1)].replace("Music/","").replace(/_/g," ")
+      typeWriter()
    }
 }

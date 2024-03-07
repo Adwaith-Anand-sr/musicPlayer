@@ -16,7 +16,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("5")
+confirm("4")
 
 function randomBgImg() {
    let array=[
@@ -61,6 +61,12 @@ function listingSongs() {
             <div class ="elem ${i}" id="${i}">
                <div class="img" id="${i}"></div>
                <h3 id="${i}">${item.replace("Music/","").replace(/_/g, " ")}</h3>
+               <div class="playAnim-container">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
             </div>
          `
       })
@@ -104,10 +110,7 @@ function playingAnimSetting(id) {
    let playAnimCont = document.querySelector(".playAnim-container")
    animStarted = true
    if (playAnimCont) {
-     elems.forEach((elem)=>{
-       elem.removeChild(playAnimCont)
-     })
-      
+      elems.removeChild(playAnimCont)
    }
    
     musicPlayLines.forEach((item,i)=>{
@@ -115,19 +118,20 @@ function playingAnimSetting(id) {
       item.style.marginLeft = "1%"
    })
    
-   elems.forEach((elem,i)=>{
-      if(id== i){
-         oldElemIndex= id
-         elem.innerHTML +=`
-            <div class="playAnim-container">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-            </div>
-         `
-      }
-   })
+   // elems.forEach((elem,i)=>{
+   //    if(id== i){
+   //       oldElemIndex= id
+   //       elem.innerHTML +=`
+   //          <div class="playAnim-container">
+   //             <span></span>
+   //             <span></span>
+   //             <span></span>
+   //             <span></span>
+   //          </div>
+   //       `
+   //    }
+   // })
+   
 }
 
 list.addEventListener("click", (e)=>{

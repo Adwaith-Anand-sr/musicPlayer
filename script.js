@@ -16,7 +16,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("8")
+confirm("9")
 
 function randomBgImg() {
    let array=[
@@ -177,12 +177,12 @@ function changeSong(a) {
    if (a==1) {
       let id = Number(currentSongId) +1
       song.src = sourceArray[id]
-      
       song.play()
       currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
       currentSongId = id
       document.querySelector(".imageDisplay .songName").textContent=""
       textIndex=0
       typeWriter()
+      playingAnimSetting(id)
    }
 }

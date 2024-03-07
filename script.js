@@ -77,15 +77,13 @@ listingSongs()
 let oldElemIndex, songsPlayed =0, animStarted = false
 
 function playingAnimSetting(id) {
-   let elems = document.querySelectorAll(".elem")
    let playAnimCont = document.querySelectorAll(".playAnim-container")
-   
    playAnimCont.forEach((item,i)=>{
+      item.style.display="none"
       if (i==id) {
          item.style.display="flex"
       }
    })
-   
     musicPlayLines.forEach((item,i)=>{
       item.style.left = ( i * 25) + "%"
       item.style.marginLeft = "1%"
@@ -104,7 +102,6 @@ function playingAnimSetting(id) {
    //       `
    //    }
    // })
-   
 }
 
 list.addEventListener("click", (e)=>{

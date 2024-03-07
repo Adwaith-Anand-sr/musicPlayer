@@ -16,7 +16,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("6")
+confirm("7")
 
 function randomBgImg() {
    let array=[
@@ -75,43 +75,16 @@ function listingSongs() {
 listingSongs()
 
 let oldElemIndex, songsPlayed =0, animStarted = false
-// function playingAnimSetting(id) {
-//    let elems = document.querySelectorAll(".elem")
-//    songsPlayed++
-//    if (songsPlayed >=2) {
-//       elem.forEach((item,i)=>{
-//          if(elemIndex == i){
-//             item.removeChild(document.querySelector(".playAnim-container"))
-//          }
-//       })
-//    }
-//     musicPlayLines.forEach((item,i)=>{
-//       item.style.left = ( i * 25) + "%"
-//       item.style.marginLeft = "1%"
-//    })
-   
-//    elems.forEach((elem,i)=>{
-//       if(id== i){
-//          elem.innerHTML +=`
-//             <div class="playAnim-container">
-//                <span></span>
-//                <span></span>
-//                <span></span>
-//                <span></span>
-//             </div>
-//          `
-//       }
-//    })
-//    elemIndex= id
-// }
 
 function playingAnimSetting(id) {
    let elems = document.querySelectorAll(".elem")
-   let playAnimCont = document.querySelector(".playAnim-container")
-   animStarted = true
-   if (playAnimCont) {
-      elems.removeChild(playAnimCont)
-   }
+   let playAnimCont = document.querySelectorAll(".playAnim-container")
+   
+   playAnimCont.forEach((item,i)=>{
+      if (i==id) {
+         item.style.display="flex"
+      }
+   })
    
     musicPlayLines.forEach((item,i)=>{
       item.style.left = ( i * 25) + "%"

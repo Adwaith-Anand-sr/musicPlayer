@@ -100,6 +100,13 @@ body,html{
      filter: hue-rotate(360deg);
    }
  }
+ .imageDisplay .swipe-controls{
+    position: absolute;
+   width: 99%;
+   height: 20%;
+   top: 80%;
+   border: 1px solid black;
+}
 .imageDisplay .playPause{
    background: #890abe;
    width: 45px;

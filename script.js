@@ -4,6 +4,8 @@ let list = document.querySelector(".list")
 let playBtn = document.querySelector(".playBtn")
 let pauseBtn = document.querySelector(".pauseBtn")
 let playPause = document.querySelector(".playPause")
+let swipeControls = document.querySelector(".swipe-controls")
+let swipeBound = swipeControls.getBoundingClientRect()
 let numberOfSongs 
 let currentPlaying
 let textIndex=0
@@ -97,7 +99,6 @@ function playingAnimSetting(id) {
    
 }
 
-
 list.addEventListener("click", (e)=>{
    song.src = sourceArray[e.target.id]
    song.play()
@@ -145,3 +146,23 @@ function playPlauseEvent() {
    });
 }
 playPlauseEvent()
+
+function swipeControl(){
+   let x1 , x2
+   swipeControls.addEventListener("touchstart", (e)=>{
+      x1 = e.touches[0].screenX
+   })
+   swipeControls.addEventListener("touchend", (e)=>{
+      x2 = e.changedTouches[0].screenX
+      setTimeout(()=>{
+         if(x1 - x2 < -(swipeBound.width/2)){
+            console.log("right")
+            swipeControls.style.border = "1px solid red"
+         }else if(x1 - x2 > (swipeBound.width/2)){
+            console.log("left")
+            swipeControls.style.border = "1px solid green"
+         }
+      },1000)
+   })
+}
+swipeControl()

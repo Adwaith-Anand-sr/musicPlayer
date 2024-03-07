@@ -207,7 +207,6 @@ function changeSong(a) {
       currentSongId = id
       document.querySelector(".imageDisplay .songName").textContent=""
       textIndex=0
-      confirm(currentPlaying)
       typeWriter()
    }
 }

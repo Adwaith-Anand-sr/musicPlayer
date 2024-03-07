@@ -16,7 +16,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("9")
+confirm("0")
 
 function randomBgImg() {
    let array=[
@@ -108,25 +108,16 @@ list.addEventListener("click", (e)=>{
    document.querySelector(".imageDisplay .songName").textContent=""
    textIndex=0
    currentPlaying= sourceArray[e.target.id].replace("Music/","").replace(/_/g," ")
-   typeWriter(currentPlaying)
+   typeWriter()
    playingAnimSetting(e.target.id)
 })
 
-// function typeWriter(name) {
-//    const container = document.querySelector(".imageDisplay .songName");
-//    if (textIndex < currentPlaying.length) {
-//     container.textContent += currentPlaying.charAt(textIndex);
-//     textIndex++;
-//     setTimeout(typeWriter, 25); // Adjust typing speed here (milliseconds)
-//    }
-// }
-
-function typeWriter(name) {
+function typeWriter() {
    const container = document.querySelector(".imageDisplay .songName");
-   if (textIndex < name.length) {
-     container.textContent += name.charAt(textIndex);
-     textIndex++;
-     setTimeout(typeWriter, 25); // Adjust typing speed here (milliseconds)
+   if (textIndex < currentPlaying.length) {
+    container.textContent += currentPlaying.charAt(textIndex);
+    textIndex++;
+    setTimeout(typeWriter, 25); // Adjust typing speed here (milliseconds)
    }
 }
 
@@ -181,11 +172,11 @@ function changeSong(a) {
    if (a==1) {
       let id = Number(currentSongId) +1
       song.src = sourceArray[id]
-      confirm(id)
+      
       song.play()
       currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
       currentSongId = id
-      confilr(currentPlaying)
-      typeWriter(currentPlaying)
+      confirm(currentPlaying)
+      typeWriter()
    }
 }

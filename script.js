@@ -7,12 +7,14 @@ let playPause = document.querySelector(".playPause")
 let swipeControls = document.querySelector(".swipe-controls")
 let swipeBound = swipeControls.getBoundingClientRect()
 let numberOfSongs 
-let currentPlaying
+let currentPlaying , currentSongId
 let textIndex=0
 const scroll = new LocomotiveScroll({
     el: document.querySelector('.list'),
     smooth: true
 });
+
+confirm("y")
 
 function randomBgImg() {
    let array=[
@@ -101,6 +103,7 @@ function playingAnimSetting(id) {
 
 list.addEventListener("click", (e)=>{
    song.src = sourceArray[e.target.id]
+   currentSongId = e.target.id
    song.play()
    playBtn.style.display= "none"
    pauseBtn.style.display= "block"
@@ -126,6 +129,7 @@ function playPlauseEvent() {
          let r = Math.floor(Math.random()* (numberOfSongs-1))
          song.src = sourceArray[r]
          song.play()
+         currentSongId = r
          playBtn.style.display= "none"
          pauseBtn.style.display= "block"
          document.querySelector(".imageDisplay .songName").textContent=""
@@ -156,8 +160,7 @@ function swipeControl(){
       x2 = e.changedTouches[0].screenX
       setTimeout(()=>{
          if(x1 - x2 < -(swipeBound.width/2)){
-            console.log("right")
-            swipeControls.style.border = "1px solid red"
+            changeSong(1)
          }else if(x1 - x2 > (swipeBound.width/2)){
             console.log("left")
             swipeControls.style.border = "1px solid green"
@@ -166,3 +169,10 @@ function swipeControl(){
    })
 }
 swipeControl()
+
+function changeSong(a) {
+   if (a==1) {
+      song.src = sourceArray[(currentSongId+1)]
+      song.play()
+   }
+}

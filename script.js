@@ -17,7 +17,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("5")
+confirm("0")
 
 function randomBgImg() {
    let array=[
@@ -190,7 +190,7 @@ function changeSong(a) {
          if (audio.readyState !== 4) { // Check if song is not fully loaded (4 represents HAVE_ENOUGH_DATA)
             changeSong(1)
          }
-      }, 5000);
+      }, 30000);
       currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
       currentSongId = id
       document.querySelector(".imageDisplay .songName").textContent=""

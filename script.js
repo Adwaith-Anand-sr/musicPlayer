@@ -17,7 +17,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("2")
+confirm("3")
 
 function randomBgImg() {
    let array=[

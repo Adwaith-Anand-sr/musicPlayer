@@ -1,7 +1,7 @@
 let sourceArray = []
 let song = document.querySelector("audio")
 let list = document.querySelector(".list")
-let elems = document.querySelectorAll(".elem")
+let elems = document.querySelectorAll(".list .elem")
 let playBtn = document.querySelector(".playBtn")
 let pauseBtn = document.querySelector(".pauseBtn")
 let playPause = document.querySelector(".playPause")

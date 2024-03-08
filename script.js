@@ -17,7 +17,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("2")
+confirm("3")
 
 function randomBgImg() {
    let array=[
@@ -202,19 +202,21 @@ function changeSong(a) {
    }else if(a==-1){
       let id = Number(currentSongId) -1
    }
-   song.src = sourceArray[id]
-   song.play()
-   currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
-   currentSongId = id
-   document.querySelector(".imageDisplay .songName").textContent=""
-   textIndex=0
-   typeWriter()
-   playingAnimSetting(id)
    setTimeout(function() {
-      if (audio.readyState !== 4) { // Check if song is not fully loaded (4 represents HAVE_ENOUGH_DATA)
-         changeSong(1)
-      }
-   }, 5000);
+      song.src = sourceArray[id]
+      song.play()
+      currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
+      currentSongId = id
+      document.querySelector(".imageDisplay .songName").textContent=""
+      textIndex=0
+      typeWriter()
+      playingAnimSetting(id)
+      setTimeout(function() {
+         if (audio.readyState !== 4) { // Check if song is not fully loaded (4 represents HAVE_ENOUGH_DATA)
+            changeSong(1)
+         }
+      }, 5000);
+   }, 100);
 }
 
 

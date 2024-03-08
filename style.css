@@ -51,11 +51,10 @@ body,html{
    }
  }
  .imageDisplay .swipe-controls{
-    position: absolute;
+   position: absolute;
    width: 99%;
    height: 20%;
    top: 80%;
-   border: 1px solid black;
 }
 .imageDisplay .playPause{
    background: #890abe;

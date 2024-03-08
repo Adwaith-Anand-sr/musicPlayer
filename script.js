@@ -17,7 +17,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("1")
+confirm("2")
 
 function randomBgImg() {
    let array=[
@@ -210,6 +210,11 @@ function changeSong(a) {
    textIndex=0
    typeWriter()
    playingAnimSetting(id)
+   setTimeout(function() {
+      if (audio.readyState !== 4) { // Check if song is not fully loaded (4 represents HAVE_ENOUGH_DATA)
+         changeSong(1)
+      }
+   }, 5000);
 }
 
 

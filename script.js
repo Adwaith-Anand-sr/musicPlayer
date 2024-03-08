@@ -1,6 +1,7 @@
 let sourceArray = []
 let song = document.querySelector("audio")
 let list = document.querySelector(".list")
+let elems = document.querySelectorAll(".elem")
 let playBtn = document.querySelector(".playBtn")
 let pauseBtn = document.querySelector(".pauseBtn")
 let playPause = document.querySelector(".playPause")
@@ -16,7 +17,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("0")
+confirm("1")
 
 function randomBgImg() {
    let array=[
@@ -84,24 +85,17 @@ function playingAnimSetting(id) {
          item.style.display="flex"
       }
    })
-    musicPlayLines.forEach((item,i)=>{
+   musicPlayLines.forEach((item,i)=>{
       item.style.left = ( i * 25) + "%"
       item.style.marginLeft = "1%"
    })
+   elems.forEach((item,i)=>{
+      item.style.color = "white"
+      if (i==id) {
+         item.style.color = "#c40505"
+      }
+   })
    
-   // elems.forEach((elem,i)=>{
-   //    if(id== i){
-   //       oldElemIndex= id
-   //       elem.innerHTML +=`
-   //          <div class="playAnim-container">
-   //             <span></span>
-   //             <span></span>
-   //             <span></span>
-   //             <span></span>
-   //          </div>
-   //       `
-   //    }
-   // })
 }
 
 list.addEventListener("click", (e)=>{

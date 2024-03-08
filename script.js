@@ -184,6 +184,7 @@ function changeSong(a) {
       playingAnimSetting(id)
    }else {
       let id = Number(currentSongId) -1
+      alert(id)
       song.src = sourceArray[id]
       song.play()
       setTimeout(function() {

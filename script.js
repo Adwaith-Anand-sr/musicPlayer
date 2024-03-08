@@ -16,7 +16,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("9")
+confirm("0")
 
 function randomBgImg() {
    let array=[
@@ -138,7 +138,7 @@ function playPlauseEvent() {
          document.querySelector(".imageDisplay .songName").textContent=""
          currentPlaying= sourceArray[r].replace("Music/","").replace(/_/g," ")
          typeWriter()
-         
+         playingAnimSetting(r)
       }
       else if (song.paused) {
          console.log('Audio is not playing.');

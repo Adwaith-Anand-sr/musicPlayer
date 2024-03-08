@@ -17,7 +17,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("1")
+confirm("2")
 
 function randomBgImg() {
    let array=[
@@ -157,9 +157,9 @@ function swipeControl(){
       x2 = e.changedTouches[0].screenX
       setTimeout(()=>{
          if(x1 - x2 < -(swipeBound.width/2)){
-            changeSong(1)
+            changeSong(1) //next song
          }else if(x1 - x2 > (swipeBound.width/2)){
-            console.log("left")
+            changeSong(-1) //previus song
             swipeControls.style.border = "1px solid green"
          }
       },1000)
@@ -170,6 +170,16 @@ swipeControl()
 function changeSong(a) {
    if (a==1) {
       let id = Number(currentSongId) +1
+      song.src = sourceArray[id]
+      song.play()
+      currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
+      currentSongId = id
+      document.querySelector(".imageDisplay .songName").textContent=""
+      textIndex=0
+      typeWriter()
+      playingAnimSetting(id)
+   }else {
+      let id = Number(currentSongId) -1
       song.src = sourceArray[id]
       song.play()
       currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")

@@ -166,35 +166,52 @@ function swipeControl(){
 }
 swipeControl()
 
+// function changeSong(a) {
+//    if (a==1) {
+//       let id = Number(currentSongId) +1
+//       song.src = sourceArray[id]
+//       song.play()
+//       currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
+//       currentSongId = id
+//       document.querySelector(".imageDisplay .songName").textContent=""
+//       textIndex=0
+//       typeWriter()
+//       playingAnimSetting(id)
+//    }else {
+//       alert(id)
+//       if (id == 0) {
+//          id = sourceArray.length-1
+//          confim(id)
+//       }else {
+//          let id = Number(currentSongId) -1
+//       }
+//       song.src = sourceArray[id]
+//       song.play()
+//       currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
+//       currentSongId = id
+//       document.querySelector(".imageDisplay .songName").textContent=""
+//       textIndex=0
+//       typeWriter()
+//       playingAnimSetting(id)
+//    }
+// }
+
 function changeSong(a) {
    if (a==1) {
       let id = Number(currentSongId) +1
-      song.src = sourceArray[id]
-      song.play()
-      currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
-      currentSongId = id
-      document.querySelector(".imageDisplay .songName").textContent=""
-      textIndex=0
-      typeWriter()
-      playingAnimSetting(id)
-   }else {
-      alert(id)
-      if (id == 0) {
-         id = sourceArray.length-1
-         confim(id)
-      }else {
-         let id = Number(currentSongId) -1
-      }
-      song.src = sourceArray[id]
-      song.play()
-      currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
-      currentSongId = id
-      document.querySelector(".imageDisplay .songName").textContent=""
-      textIndex=0
-      typeWriter()
-      playingAnimSetting(id)
+   }else if(a==-1){
+      let id = Number(currentSongId) -1
    }
+   song.src = sourceArray[id]
+   song.play()
+   currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
+   currentSongId = id
+   document.querySelector(".imageDisplay .songName").textContent=""
+   textIndex=0
+   typeWriter()
+   playingAnimSetting(id)
 }
+
 
 song.addEventListener("ended", ()=>{
    changeSong(1)//forward

@@ -17,7 +17,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("3")
+confirm("5")
 
 function randomBgImg() {
    let array=[
@@ -166,57 +166,38 @@ function swipeControl(){
 }
 swipeControl()
 
-// function changeSong(a) {
-//    if (a==1) {
-//       let id = Number(currentSongId) +1
-//       song.src = sourceArray[id]
-//       song.play()
-//       currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
-//       currentSongId = id
-//       document.querySelector(".imageDisplay .songName").textContent=""
-//       textIndex=0
-//       typeWriter()
-//       playingAnimSetting(id)
-//    }else {
-//       alert(id)
-//       if (id == 0) {
-//          id = sourceArray.length-1
-//          confim(id)
-//       }else {
-//          let id = Number(currentSongId) -1
-//       }
-//       song.src = sourceArray[id]
-//       song.play()
-//       currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
-//       currentSongId = id
-//       document.querySelector(".imageDisplay .songName").textContent=""
-//       textIndex=0
-//       typeWriter()
-//       playingAnimSetting(id)
-//    }
-// }
-
 function changeSong(a) {
    if (a==1) {
       let id = Number(currentSongId) +1
-   }else if(a==-1){
-      let id = Number(currentSongId) -1
-   }
-   setTimeout(function() {
       song.src = sourceArray[id]
       song.play()
+      setTimeout(function() {
+         if (song.readyState !== 4) { // Check if song is not fully loaded (4 represents HAVE_ENOUGH_DATA)
+            changeSong(1)
+         }
+      }, 5000);
       currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
       currentSongId = id
       document.querySelector(".imageDisplay .songName").textContent=""
       textIndex=0
       typeWriter()
       playingAnimSetting(id)
+   }else {
+      let id = Number(currentSongId) -1
+      song.src = sourceArray[id]
+      song.play()
       setTimeout(function() {
          if (audio.readyState !== 4) { // Check if song is not fully loaded (4 represents HAVE_ENOUGH_DATA)
             changeSong(1)
          }
       }, 5000);
-   }, 100);
+      currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
+      currentSongId = id
+      document.querySelector(".imageDisplay .songName").textContent=""
+      textIndex=0
+      typeWriter()
+      playingAnimSetting(id)
+   }
 }
 
 

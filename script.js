@@ -178,10 +178,9 @@ function changeSong(a) {
       typeWriter()
       playingAnimSetting(id)
    }else {
-      if (Number(currentSongId) ==0) {
-         let id = sourceArray.length -1
-      }else {
-         let id = Number(currentSongId) -1
+      let id = Number(currentSongId) -1
+      if (id == NaN) {
+         id = sourceArray.length-1
       }
       song.src = sourceArray[id]
       song.play()

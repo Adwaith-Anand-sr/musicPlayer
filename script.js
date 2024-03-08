@@ -160,7 +160,6 @@ function swipeControl(){
             changeSong(1) //next song
          }else if(x1 - x2 > (swipeBound.width/2)){
             changeSong(-1) //previus song
-            swipeControls.style.border = "1px solid green"
          }
       },1000)
    })

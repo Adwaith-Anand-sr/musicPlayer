@@ -184,7 +184,6 @@ function changeSong(a) {
       playingAnimSetting(id)
    }else {
       let id = Number(currentSongId) -1
-      alert(id)
       song.src = sourceArray[id]
       song.play()
       setTimeout(function() {
@@ -200,7 +199,6 @@ function changeSong(a) {
       playingAnimSetting(id)
    }
 }
-
 
 song.addEventListener("ended", ()=>{
    changeSong(1)//forward

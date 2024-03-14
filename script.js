@@ -202,9 +202,10 @@ function changeSong(a) {
 }
 
 song.addEventListener("ended", ()=>{
-   changeSong(1)//forward
    if (song.id == sourceArray.length -1) {
       song.src = sourceArray[0]
       song.play()
    }
+   changeSong(1)//forward
+   
 })

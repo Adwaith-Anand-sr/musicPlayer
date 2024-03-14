@@ -17,7 +17,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-confirm("1")
+confirm("2")
 
 function randomBgImg() {
    let array=[
@@ -203,4 +203,8 @@ function changeSong(a) {
 
 song.addEventListener("ended", ()=>{
    changeSong(1)//forward
+   if (song.id == sourceArray.length -1) {
+      song.src = sourceArray[0]
+      song.play()
+   }
 })

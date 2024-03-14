@@ -171,11 +171,12 @@ function changeSong(a) {
       let id = Number(currentSongId) +1
       song.src = sourceArray[id]
       song.play()
-      setTimeout(function() {
+      let loadTimeout = setTimeout(function() {
          if (song.readyState !== 4) { // Check if song is not fully loaded (4 represents HAVE_ENOUGH_DATA)
             changeSong(1)
+            clearTimeout(loadTimeout)
          }
-      }, 5000);
+      }, 10000);
       currentPlaying= sourceArray[id].replace("Music/","").replace(/_/g," ")
       currentSongId = id
       document.querySelector(".imageDisplay .songName").textContent=""
